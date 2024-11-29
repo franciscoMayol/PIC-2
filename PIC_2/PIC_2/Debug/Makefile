@@ -38,6 +38,7 @@ SUBDIRS :=
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
 ../adc.c \
+../celda_de_carga.c \
 ../lcd_i2c.c \
 ../main.c \
 ../uart.c
@@ -51,24 +52,28 @@ ASM_SRCS +=
 
 OBJS +=  \
 adc.o \
+celda_de_carga.o \
 lcd_i2c.o \
 main.o \
 uart.o
 
 OBJS_AS_ARGS +=  \
 adc.o \
+celda_de_carga.o \
 lcd_i2c.o \
 main.o \
 uart.o
 
 C_DEPS +=  \
 adc.d \
+celda_de_carga.d \
 lcd_i2c.d \
 main.d \
 uart.d
 
 C_DEPS_AS_ARGS +=  \
 adc.d \
+celda_de_carga.d \
 lcd_i2c.d \
 main.d \
 uart.d
@@ -88,6 +93,13 @@ LINKER_SCRIPT_DEP+=
 
 # AVR32/GNU C Compiler
 ./adc.o: .././adc.c
+	@echo Building file: $<
+	@echo Invoking: XC8 C Compiler : 2.36
+	$(QUOTE)C:\Program Files\Microchip\xc8\v2.36\bin\xc8-cc.exe$(QUOTE)  -mcpu=ATmega328P  -mdfp="C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\xc8"  -c -x c -funsigned-char -funsigned-bitfields -mext=cci -D__ATmega328P__ -DDEBUG  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+./celda_de_carga.o: .././celda_de_carga.c
 	@echo Building file: $<
 	@echo Invoking: XC8 C Compiler : 2.36
 	$(QUOTE)C:\Program Files\Microchip\xc8\v2.36\bin\xc8-cc.exe$(QUOTE)  -mcpu=ATmega328P  -mdfp="C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\xc8"  -c -x c -funsigned-char -funsigned-bitfields -mext=cci -D__ATmega328P__ -DDEBUG  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

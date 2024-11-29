@@ -1,4 +1,5 @@
-main.d main.o: .././main.c \
+celda_de_carga.d celda_de_carga.o: .././celda_de_carga.c \
+ .././celda_de_carga.h \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\io.h \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\sfr_defs.h \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\inttypes.h \
@@ -14,10 +15,9 @@ main.d main.o: .././main.c \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\lock.h \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\util\delay.h \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\util\delay_basic.h \
- c:\program\ files\microchip\xc8\v2.36\avr\avr\include\math.h \
- c:\program\ files\microchip\xc8\v2.36\avr\avr\include\stdlib.h \
- c:\program\ files\microchip\xc8\v2.36\avr\avr\include\stdio.h \
- .././lcd_i2c.h .././adc.h .././uart.h .././celda_de_carga.h
+ c:\program\ files\microchip\xc8\v2.36\avr\avr\include\math.h
+
+.././celda_de_carga.h:
 
 c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\io.h:
 
@@ -50,15 +50,3 @@ c:\program\ files\microchip\xc8\v2.36\avr\avr\include\util\delay.h:
 c:\program\ files\microchip\xc8\v2.36\avr\avr\include\util\delay_basic.h:
 
 c:\program\ files\microchip\xc8\v2.36\avr\avr\include\math.h:
-
-c:\program\ files\microchip\xc8\v2.36\avr\avr\include\stdlib.h:
-
-c:\program\ files\microchip\xc8\v2.36\avr\avr\include\stdio.h:
-
-.././lcd_i2c.h:
-
-.././adc.h:
-
-.././uart.h:
-
-.././celda_de_carga.h:

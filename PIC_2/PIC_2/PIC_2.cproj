@@ -94,6 +94,9 @@
     <Compile Include="adc.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="celda_de_carga.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="lcd_i2c.c">
       <SubType>compile</SubType>
     </Compile>
